@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Survey Questions</h1>
+
+        <h2>About You</h2>
+        <form method="post">
+            <div class="form-group">
+                <label for="exampleInputEmail1">Name (required)</label>
+                <input type="text" class="form-control" id="name" placeholder="Name">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Photo Image (required)</label>
+                <input type="text" class="form-control" id="photo" placeholder="Photo">
+            </div>
+            <div class="form-group">
+                <h3>Your mind is always buzzing with unexplored ideas and plans.</h3>
+                <select name="question1" id="qOne">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <h3>Generally speaking, you rely more on your experience than your imagination.</h3>
+                <select name="question2" id="qTwo">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <h3>You find it easy to stay relaxed and focused even when there is some pressure.</h3>
+                <select name="question3" id="qThree">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <h3>You rarely do something just out of sheer curiosity.</h3>
+                <select name="question4" id="qFour">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <h3>People can rarely upset you.</h3>
+                <select name="question5" id="qFive">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <h3>It is often difficult for you to relate to other people’s feelings.</h3>
+                <select name="question6" id="qSix">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <h3>In a discussion, truth should be more important than people’s sensitivities.</h3>
+                <select name="question7" id="qSeven">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <h3>You rarely get carried away by fantasies and ideas.
+                </h3>
+                <select name="question8" id="qEight">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <h3>You think that everyone’s views should be respected regardless of whether they are supported by facts or
+                    not.
+                </h3>
+                <select name="question9" id="qNine">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <h3>You feel more energetic after spending time with a group of people.</h3>
+                <select name="question10" id="qTen">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
+
+            <!-- MODAL-->
+            <div id="results-modal" class="modal fade" role="dialog">
+                <div class="modal-dialog">
+
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button class="close" data-dismiss="modal">&times;</button>
+                            <h2 class="modal-title">
+                                <strong>Best Match</strong>
+                            </h2>
+                            <h3 id="match-name"></h3>
+                            <img id="match-img" src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg" alt="BEST MATCH PICTURE"
+                            />
+                        </div>
+
+                        <div class="modal-footer">
+                            <button class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+
+
+            <button type="submit" class="btn btn-default btn-primary" id="submitBtn">Submit</button>
+        </form>
+
+    </div>
+
+    <script type="text/javascript">
+        /*---------------------------------------------------
+            Run post with object containing all user input...
+            do comparisions in apiRoutes folder
+        ----------------------------------------------------*/
+        $('#submitBtn').click(function (e) {
+            e.preventDefault();
+            console.log($('#qOne :selected').val())
+            var newEntry = {
+                name: $('#name').val().trim(),
+                photo: $('#photo').val().trim(),
+                scores: [$('#qOne :selected').val(), $('#qTwo :selected').val(), $('#qThree :selected').val(), $('#qFour :selected').val(), $('#qFive :selected').val(),
+                $('#qSix :selected').val(), $('#qSeven :selected').val(), $('#qEight :selected').val(), $('#qNine :selected').val(), $('#qTen :selected').val()]
+            }
+            console.log("NEW ENTRY: " + JSON.stringify(newEntry));
+            //newEntry becomes req sent into apiRoutes post function
+            $.post('http://localhost:3000/api/new', newEntry, function (data) {
+
+                // Grab the result from the AJAX post so that the best match's name and photo are displayed.
+                $("#match-name").text(data.name);
+                $("#match-img").attr("src", data.photo);
+
+                // Show the modal with the best match
+                $("#results-modal").toggleClass("modal");
+                $("#results-modal").toggleClass("fade");
+
+            });
+
+
+
+        })
+
+
+    </script>
+</body>
+
+</html>
