@@ -5,7 +5,7 @@ var express = require('express');
 var bodyParser = require('body-parser');
 
 var app = express();
-var PORT = 3000;
+var PORT = process.env.PORT || 3000;
 
 /*-----------------------------------------------------
  app is a parameter passed in htmlRoutes as app
